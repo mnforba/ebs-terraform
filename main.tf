@@ -1,3 +1,17 @@
+# Create S3 bucket
+resource "aws_s3_bucket" "devops-ci" {
+  bucket = "nodejs-build"
+  acl = "public-read"
+  versioning {
+    enabled = true 
+  }
+  tags = {
+    Name = "DevopCI"
+    Environment = "Test"
+  }
+}
+
+
 # Create elastic beanstalk application
  
 resource "aws_elastic_beanstalk_application" "elasticapp" {
