@@ -1,6 +1,6 @@
 # Create S3 bucket
 resource "aws_s3_bucket" "devops-ci" {
-  bucket = "nodejs-build"
+  bucket = "nodejs-s3-with-terraform"
   acl = "public-read"
   versioning {
     enabled = true 
